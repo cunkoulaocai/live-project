@@ -1,3 +1,4 @@
+
 package maskAppointment.pojo;
 
 public class Citizen {
@@ -11,7 +12,7 @@ public class Citizen {
 	public Citizen() {
 	}
 	
-	public Citizen(String name, String idNumber, String phone, int orderNum, int lastRound) {
+	public Citizen(String idNumber,String name, String phone, int orderNum, int lastRound) {
 		super();
 		this.name = name;
 		this.idNumber = idNumber;
@@ -53,3 +54,4 @@ public class Citizen {
 	
 	
 }
+
