@@ -12,7 +12,7 @@ public class DBUtil {
 	static String database = "liveprojectratemax";
 	static String encoding = "UTF-8";
 	static String loginName = "root";
-	static String password = "";
+	static String password = "root";
 
 	static {
 		try {

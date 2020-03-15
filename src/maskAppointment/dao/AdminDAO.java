@@ -10,5 +10,5 @@ import maskAppointment.pojo.Admin;
  */
 
 public interface AdminDAO {
-	
+	String getPasswd(String name);
 }
