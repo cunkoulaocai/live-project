@@ -1,19 +1,21 @@
 package maskAppointment.pojo;
 
+import java.util.Date;
+
 public class Systemtime {
 	private int  id;
-	private String opentime;
-	private String closetime;
+	private Date opentime;
+	private Date closetime;
 	
 	public int getId() {
 		return id;
 	}
 	
-	public String getOpentime() {
+	public Date getOpentime() {
 		return opentime;
 	}
 	
-	public String geClosetime() {
+	public Date geClosetime() {
 		return closetime;
 	}
 	
@@ -21,11 +23,11 @@ public class Systemtime {
 		this.id = id;
 	}
 	
-	public void setOpentime(String opentime) {
+	public void setOpentime(Date opentime) {
 		this.opentime = opentime;
 	}
 	
-	public void setClosetime(String closetime) {
+	public void setClosetime(Date closetime) {
 		this.closetime = closetime;
 	}
 	
