@@ -14,7 +14,7 @@
             </div>
 
             <div class="loginInput ">
-                <input id="password" name="remain"   type="text">
+                <input id="password" name="max"   type="text">
             </div>
             <button class="btn btn-block redButton" type="submit">登录</button>
             </form>

@@ -9,7 +9,7 @@ package maskAppointment.pojo;
 public class Mask {
 	private int totalCount; //口罩总数量
 	private int remainCount; //口罩剩余数量
-	
+	private int maxCount; //单次预约最大数量
 	public int getTotalCount() {
 		return totalCount;
 	}
@@ -21,5 +21,11 @@ public class Mask {
 	}
 	public void setRemainCount(int remainCount) {
 		this.remainCount = remainCount;
+	}
+	public int getMaxCount() {
+		return maxCount;
+	}
+	public void setMaxCount(int maxCount) {
+		this.maxCount = maxCount;
 	}
 }

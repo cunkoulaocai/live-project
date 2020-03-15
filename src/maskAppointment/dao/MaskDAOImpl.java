@@ -24,7 +24,6 @@ public class MaskDAOImpl implements MaskDAO{
 	 */
 	@Override
 	public Mask getMask() {
-		int totalCnt = 0;
 		Mask mask = new Mask();
 		try (Connection c = DBUtil.getConnection(); Statement s = c.createStatement()) {
 			String sqlString = "select * from mask";
@@ -33,6 +32,7 @@ public class MaskDAOImpl implements MaskDAO{
 			if (rs.next()) {
 				mask.setTotalCount(rs.getInt("total")); 
 				mask.setRemainCount(rs.getInt("remainder"));
+				mask.setTotalCount(rs.getInt("maxcount"));
 			}
 				
 		} catch (SQLException e) {
@@ -53,10 +53,10 @@ public class MaskDAOImpl implements MaskDAO{
 		//获取口罩数量
 		int totalCnt = mask.getTotalCount();
 		int remainCnt = mask.getRemainCount();
-		
+		int maxCnt = mask.getMaxCount();
 		try (Connection c = DBUtil.getConnection(); Statement s = c.createStatement()) {
 			String sqlString = "update mask set total = '" + totalCnt + "',"
-					+ "remainder = '" + remainCnt + "'";
+					+ "maxcount = '" + maxCnt + "'";
 			int changedLine = s.executeUpdate(sqlString);
 			if(changedLine == 1) {
 				result = true;
