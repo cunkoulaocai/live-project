@@ -8,6 +8,12 @@ import maskAppointment.util.*;
  *
  */
 public class AdminDAOImpl implements AdminDAO{
+	
+	/*
+	 * 获取管理员账号的密码
+	 * 参数：管理员账号名
+	 * 返回值：该账号对应的密码值，若账号不存在则值为空
+	 */
 	@Override
 	public String getPasswd(String name) {
 		String passwdString = "";

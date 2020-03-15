@@ -10,11 +10,11 @@
 <form class="loginForm" action="setMaskCountServlet" method="post">
 	<div>账户登录</div>
             <div >
-                <input id="name" name="name" placeholder="手机/会员名/邮箱" type="text">
+                <input id="name" name="total"  type="text">
             </div>
 
             <div class="loginInput ">
-                <input id="password" name="password" type="password" placeholder="密码" type="text">
+                <input id="password" name="remain"   type="text">
             </div>
             <button class="btn btn-block redButton" type="submit">登录</button>
             </form>

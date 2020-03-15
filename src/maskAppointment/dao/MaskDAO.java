@@ -11,5 +11,6 @@ import maskAppointment.pojo.Mask;
 
 public interface MaskDAO {
 	Mask getMask();
+	boolean setMask(Mask mask);
 	
 }

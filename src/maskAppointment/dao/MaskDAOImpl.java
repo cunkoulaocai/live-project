@@ -19,6 +19,8 @@ public class MaskDAOImpl implements MaskDAO{
 
 	/**
 	 *  获取数据库中口罩的数量，返回一个Mask对象。
+	 *  传入参数：无
+	 *  返回参数：Mask对象
 	 */
 	@Override
 	public Mask getMask() {
@@ -36,9 +38,37 @@ public class MaskDAOImpl implements MaskDAO{
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 		return mask;
 	}
 
+	/**
+	 *  根据管理员的输入设置数据库中口罩的数量
+	 *  传入参数：口罩对象
+	 *  返回参数：是否成功
+	 */
+	@Override
+	public boolean setMask(Mask mask) {
+		boolean result = false;
+		//获取口罩数量
+		int totalCnt = mask.getTotalCount();
+		int remainCnt = mask.getRemainCount();
+		
+		try (Connection c = DBUtil.getConnection(); Statement s = c.createStatement()) {
+			String sqlString = "update mask set total = '" + totalCnt + "',"
+					+ "remainder = '" + remainCnt + "'";
+			int changedLine = s.executeUpdate(sqlString);
+			if(changedLine == 1) {
+				result = true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+
+	
 	
 
 }

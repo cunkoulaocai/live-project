@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import maskAppointment.dao.AdminDAO;
-import maskAppointment.dao.AdminDAOImpl;
 import maskAppointment.dao.MaskDAO;
 import maskAppointment.dao.MaskDAOImpl;
 import maskAppointment.pojo.Mask;
@@ -34,10 +32,13 @@ public class SetMaskCountServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Mask maskCntMask = new Mask();
-		maskCntMask = maskDAO.getMask();
-		System.out.println("total:"+maskCntMask.getTotalCount());
-		System.out.println("remain:"+maskCntMask.getRemainCount());
-		
+		String totalString = request.getParameter("total");
+		String remainString = request.getParameter("remain");
+		int totalCnt = Integer.valueOf(totalString);
+		int remainCnt = Integer.valueOf(remainString);
+		maskCntMask.setTotalCount(totalCnt);
+		maskCntMask.setRemainCount(remainCnt);
+		maskDAO.setMask(maskCntMask);
 	}
 
 	/**
