@@ -11,6 +11,7 @@ public class Admin {
 	private String password;
 	private int id;
 	
+	
 	public String getUserName() {
 		return userName;
 	}

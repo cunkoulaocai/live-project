@@ -5,7 +5,6 @@ package maskAppointment.pojo;
  *
  * 口罩POJO
  */
-
 public class Mask {
 	private int totalCount; //口罩总数量
 	private int remainCount; //口罩剩余数量

@@ -1,7 +1,7 @@
 package maskAppointment.pojo;
 
 
-public class orderInformation {
+public class OrderInformation {
 //	orderId varchar(40) not null primary key comment "预约编号",
 //    idNumber varchar(20) not null comment "市民身份证号",
 //    orderRound int(4) not null comment "预约轮数",
