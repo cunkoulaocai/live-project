@@ -2,7 +2,7 @@ package maskAppointment.pojo;
 
 /**
  * 
- * @author 221701120
+ * @author 221701120_hxy
  *
  * 管理员POJO
  */

@@ -2,7 +2,11 @@ package maskAppointment.dao;
 
 import java.sql.*;
 import maskAppointment.util.*;
-
+/**
+ * 
+ * @author 221701120_hxy
+ *
+ */
 public class AdminDAOImpl implements AdminDAO{
 	@Override
 	public String getPasswd(String name) {

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form class="loginForm" action="loginServlet" method="post">
+<form class="loginForm" action="setMaskCountServlet" method="post">
 	<div>账户登录</div>
             <div >
                 <input id="name" name="name" placeholder="手机/会员名/邮箱" type="text">
